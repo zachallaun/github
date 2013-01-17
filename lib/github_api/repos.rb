@@ -322,7 +322,7 @@ module Github
     def list(*args)
       params = args.extract_options!
       normalize! params
-      filter! %w[ user org type sort direction ], params
+      filter! %w[ user org type sort direction client_id client_secret ], params
 
       response = if (user_name = params.delete("user"))
         get_request("/users/#{user_name}/repos", params)

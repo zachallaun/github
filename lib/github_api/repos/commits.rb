@@ -9,6 +9,8 @@ module Github
       author
       since
       until
+      client_id
+      client_secret
     ].freeze
 
     # List commits on a repository
